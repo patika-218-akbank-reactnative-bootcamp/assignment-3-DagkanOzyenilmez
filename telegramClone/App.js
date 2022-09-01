@@ -11,6 +11,8 @@ import ChatListScreen from './src/screens/ChatListScreen';
 import ChatDetailScreen from './src/screens/ChatDetailScreen';
 import ContactListScreen from './src/screens/ContactListScreen';
 import SettingScreen from './src/screens/SettingScreen';
+import ChangeThemeScreen from './src/screens/ChangeThemeScreen';
+import EditProfileScreen from './src/screens/EditProfile';
 
 
 const Stack = createNativeStackNavigator();
@@ -22,6 +24,8 @@ const StackNavigator = () => {
       <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false}}/>
       <Stack.Screen name="MainScreen" component={NavigationScreen} options={{ headerShown: false}}/>
       <Stack.Screen name="ChatDetail" component={ChatDetailScreen} options={{headerBackTitleVisible: false}}/>
+      <Stack.Screen name="Change Theme" component={ChangeThemeScreen} options={{headerBackTitleVisible: false}}/>
+      <Stack.Screen name="Edit Profile" component={EditProfileScreen} options={{headerBackTitleVisible: false}}/>
     </Stack.Navigator>
   )
   

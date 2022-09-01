@@ -22,7 +22,8 @@ const SettingScreen = ({ navigation }) => {
             <View
             style={styles.buttonContainer}>
                 <Pressable
-                style={styles.button}>
+                style={styles.button}
+                onPress={() => navigation.navigate('Change Theme') }>
                     <Text
                     style={styles.buttonText}>
                         Change Theme
@@ -32,10 +33,22 @@ const SettingScreen = ({ navigation }) => {
             <View
             style={styles.buttonContainer}>
                 <Pressable
-                style={styles.button}>
+                style={styles.button}
+                onPress={() => navigation.navigate('Edit Profile')}>
                     <Text
                     style={styles.buttonText}>
                         Edit Profile
+                    </Text>
+                </Pressable>
+            </View>
+            <View
+            style={styles.logoutButtonContainer}>
+                <Pressable
+                style={styles.LogoutButton}
+                onPress={() => navigation.navigate('Login')}>
+                    <Text
+                    style={styles.buttonText}>
+                        Logout
                     </Text>
                 </Pressable>
             </View>
@@ -74,11 +87,22 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 10,
     },
+    logoutButtonContainer:{
+        alignItems: 'center',
+        marginTop: 220,
+    },
     button:{
         width: 300,
         height: 40,
         borderRadius:16,
         backgroundColor: '#25A3E1',
+        alignItems: 'center',
+    },
+    LogoutButton:{
+        width: 300,
+        height: 40,
+        borderRadius:16,
+        backgroundColor: '#FF4B43',
         alignItems: 'center',
     },
     buttonText:{
