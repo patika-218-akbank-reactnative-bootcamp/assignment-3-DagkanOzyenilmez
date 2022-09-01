@@ -1,6 +1,12 @@
 import React from "react";
 import {View, Text, StyleSheet, Pressable} from "react-native";
 
+const ChatHeader = () => {
+    <View>
+        
+    </View>
+}
+
 const ChatDetailScreen = ({ navigation }) => {
     return(
         <View style={styles.container}>
