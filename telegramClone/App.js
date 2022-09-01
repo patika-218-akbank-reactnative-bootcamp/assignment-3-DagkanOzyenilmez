@@ -23,7 +23,7 @@ const StackNavigator = () => {
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false}}/>
       <Stack.Screen name="MainScreen" component={NavigationScreen} options={{ headerShown: false}}/>
-      <Stack.Screen name="ChatDetail" component={ChatDetailScreen} options={{headerBackTitleVisible: false}}/>
+      <Stack.Screen name="ChatDetail" component={ChatDetailScreen} options={{ headerBackTitle: "Back", headerTitle: "John Doe"}}/>
       <Stack.Screen name="Change Theme" component={ChangeThemeScreen} options={{headerBackTitleVisible: false}}/>
       <Stack.Screen name="Edit Profile" component={EditProfileScreen} options={{headerBackTitleVisible: false}}/>
     </Stack.Navigator>
@@ -35,12 +35,11 @@ const NavigationScreen = () => {
   return(
     <Tabs.Navigator>
       <Tabs.Screen name="Contacts" component={ContactListScreen}/>
-      <Tabs.Screen name="ChatList" component={ChatListScreen}/>
+      <Tabs.Screen name="Chats" component={ChatListScreen}/>
       <Tabs.Screen name="Settings" component={SettingScreen}/>
     </Tabs.Navigator>
   )
 }
-
 
 function App() {
   return (

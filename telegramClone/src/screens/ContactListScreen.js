@@ -1,13 +1,16 @@
 import React from "react";
-import {View, Text, StyleSheet, Pressable} from "react-native";
+import {View, Text, StyleSheet, Pressable, ScrollView} from "react-native";
+import ContactItem from "../components/ContactItem";
 
 const ContactListScreen = ({ navigation }) => {
     return(
-        <View style={styles.container}>
-            <Text>
-                Contact Lists Page
-            </Text>
-        </View>
+        <ScrollView>
+            <ContactItem/>
+            <ContactItem/>
+            <ContactItem/>
+            <ContactItem/>
+            <ContactItem/>
+        </ScrollView>
     )
 };
 

@@ -1,18 +1,33 @@
 import React from "react";
-import {View, Text, StyleSheet, Pressable} from "react-native";
+import {View, Text, StyleSheet, Pressable, ScrollView} from "react-native";
+import ChatItem from "../components/ChatItem";
 
 
 
 const ChatListScreen = ({ navigation }) => {
     return(
-        <View style={styles.container}>
+        <ScrollView>
             <Pressable
             onPress={() => navigation.navigate('ChatDetail') }>
-                <Text>
-                    Go to chat !!
-                </Text>
+                <ChatItem/>
             </Pressable>
-        </View>
+            <Pressable
+            onPress={() => navigation.navigate('ChatDetail') }>
+                <ChatItem/>
+            </Pressable>
+            <Pressable
+            onPress={() => navigation.navigate('ChatDetail') }>
+                <ChatItem/>
+            </Pressable>
+            <Pressable
+            onPress={() => navigation.navigate('ChatDetail') }>
+                <ChatItem/>
+            </Pressable>
+            <Pressable
+            onPress={() => navigation.navigate('ChatDetail') }>
+                <ChatItem/>
+            </Pressable>
+        </ScrollView>
     )
 };
 

@@ -67,6 +67,19 @@ const LoginScreen = ({navigation}) => {
                 <View
                 style={styles.inputBorderLine}></View>
             </View>
+            <View
+            style={styles.inputContainer}>
+                <Text
+                style={styles.inputName}>
+                    Username
+                </Text>
+                <TextInput
+                placeholder="Type your username"
+                style={styles.inputArea}
+                />
+                <View
+                style={styles.inputBorderLine}></View>
+            </View>
             <View style={styles.loginButtonContainer}>  
                 <Pressable
                 style={styles.loginButton}

@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     logo:{
         width:100,
         height:100,
-        marginBottom:100,
+        marginBottom:60,
         marginTop:100,
     },
     inputContainer:{
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     },
     loginButtonContainer:{
         alignItems:'center',
-        marginTop:80,
+        marginTop:60,
     },
     loginButton:{
         width: 160,
