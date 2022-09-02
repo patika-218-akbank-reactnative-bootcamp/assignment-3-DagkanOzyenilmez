@@ -1,6 +1,6 @@
 **React Native Telegram Clone**
 
-This project is the third homework of Akbank React Native Bootcamp. 
+This project is prepared for the third assignment of Akbank React Native Bootcamp. 
 
 **Screenshots**
 
