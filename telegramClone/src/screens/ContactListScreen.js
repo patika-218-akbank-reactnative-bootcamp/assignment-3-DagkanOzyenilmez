@@ -7,9 +7,12 @@ const ContactListScreen = ({ navigation }) => {
     const {user, setUser} = useContext(UserContext);
     return(
         <ScrollView>
-            <ContactItem
-            userName={user.user1.name}
-            imageUrl={user.user1.imageUrl}/>
+            <Pressable onPress={() => navigation.navigate('ChatDetail')}>
+                <ContactItem
+                userName={user.user1.name}
+                imageUrl={user.user1.imageUrl}/>
+            </Pressable>
+            
             <ContactItem
             userName={user.user2.name}
             imageUrl={user.user2.imageUrl}/>

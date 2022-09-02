@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import {View, Text, StyleSheet, Pressable, Button, Image} from "react-native";
 import { UserContext } from "../components/context/user";
 
 
-const ChatDetailScreen = ({ navigation, userName }) => {
+const ChatDetailScreen = ({ navigation}) => {
+    const {user, setUser} = useContext(UserContext);
     return(
         <View>
             <View style={styles.headerContainer}>

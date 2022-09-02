@@ -15,7 +15,7 @@ const ChatItem = ({userName, imageUrl}) => {
                             <Text style={styles.date}>13.08</Text>
                         </View>
                     </View>
-                    <Text style={styles.text}>Ee daha daha nasılsınız? Ben geldim diye mi kasıldınız ? Bugüne özel mi toplandınız ? </Text>
+                    <Text style={styles.text}>Lorem ipsum dolor si amet. Lorem ipsum dolor si amet. Lorem ipsum dolor si amet.</Text>
                 </View>
             </View>
             
@@ -41,17 +41,20 @@ const styles = StyleSheet.create({
     userNameAndDate:{
         display: 'flex',
         flexDirection: 'row',
+        marginRight: 20,
     },
     text:{
         fontSize: 14,
         color:'#A5A5A5',
         flex: 1, 
-        flexWrap: 'wrap' 
+        flexWrap: 'wrap',
+        marginRight: 20, 
     },
     ImageUserNameText:{
         display: 'flex',
         flexDirection: 'row',
         margin:10,
+        marginRight: 20,
     },
     image:{
         width:60,
@@ -61,7 +64,7 @@ const styles = StyleSheet.create({
     dateContainer:{
         display: 'flex',
         flex: 1,
-        flexDirection: 'row-reverse', 
+        flexDirection: 'row-reverse',
     },
     date:{
         fontSize: 14,
