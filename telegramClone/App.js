@@ -13,6 +13,7 @@ import ContactListScreen from './src/screens/ContactListScreen';
 import SettingScreen from './src/screens/SettingScreen';
 import ChangeThemeScreen from './src/screens/ChangeThemeScreen';
 import EditProfileScreen from './src/screens/EditProfile';
+import UserProvider from './src/components/provider/UserProvider';
 
 
 const Stack = createNativeStackNavigator();
@@ -23,7 +24,7 @@ const StackNavigator = () => {
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false}}/>
       <Stack.Screen name="MainScreen" component={NavigationScreen} options={{ headerShown: false}}/>
-      <Stack.Screen name="ChatDetail" component={ChatDetailScreen} options={{ headerBackTitle: "Back", headerTitle: "John Doe"}}/>
+      <Stack.Screen name="ChatDetail" component={ChatDetailScreen} options={{ headerShown: false}}/>
       <Stack.Screen name="Change Theme" component={ChangeThemeScreen} options={{headerBackTitleVisible: false}}/>
       <Stack.Screen name="Edit Profile" component={EditProfileScreen} options={{headerBackTitleVisible: false}}/>
     </Stack.Navigator>
@@ -33,19 +34,25 @@ const StackNavigator = () => {
 
 const NavigationScreen = () => {
   return(
-    <Tabs.Navigator>
-      <Tabs.Screen name="Contacts" component={ContactListScreen}/>
-      <Tabs.Screen name="Chats" component={ChatListScreen}/>
-      <Tabs.Screen name="Settings" component={SettingScreen}/>
-    </Tabs.Navigator>
+    <UserProvider>
+      <Tabs.Navigator>
+        <Tabs.Screen name="Contacts" component={ContactListScreen}/>
+        <Tabs.Screen name="Chats" component={ChatListScreen}/>
+        <Tabs.Screen name="Settings" component={SettingScreen}/>
+      </Tabs.Navigator>
+    </UserProvider>
+   
   )
 }
 
 function App() {
   return (
-    <NavigationContainer>
-      <StackNavigator/>
-    </NavigationContainer>
+    <UserProvider>
+      <NavigationContainer>
+        <StackNavigator/>
+      </NavigationContainer>
+    </UserProvider>
+
   );
 }
 

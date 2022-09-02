@@ -1,26 +1,33 @@
 import React from "react";
-import {View, Text, StyleSheet, Pressable} from "react-native";
+import {View, Text, StyleSheet, Pressable, Button, Image} from "react-native";
+import { UserContext } from "../components/context/user";
 
-const ChatHeader = () => {
-    <View>
-        
-    </View>
-}
 
-const ChatDetailScreen = ({ navigation }) => {
+const ChatDetailScreen = ({ navigation, userName }) => {
     return(
-        <View style={styles.container}>
-            <Text>
-                Chat detail page
-            </Text>
+        <View>
+            <View style={styles.headerContainer}>
+                <View style={styles.headerComponents}>
+                    <Button style={styles.backButton} title={'Back'} onPress={()=>navigation.navigate('Chats')}/>
+                    <Image style={styles.profileImage}></Image>
+                    <View style={styles.receiverInfoContainer}>
+                        <Text style={styles.receiverName}></Text>
+                        <Text style={styles.receiverLastSeen}></Text>
+                    </View>
+                </View>
+            </View>
+            <View style={styles.messageContainer}></View>
+            <View style={styles.bottomContainer}></View>
+
         </View>
     )
 };
 
 const styles = StyleSheet.create({
-    container: {
-        alignItems: 'center',
-        marginTop: 50,
+    headerContainer:{
+        marginTop: 40,
+        display: 'flex',
+        flexDirection: 'row',
     }
 })
 

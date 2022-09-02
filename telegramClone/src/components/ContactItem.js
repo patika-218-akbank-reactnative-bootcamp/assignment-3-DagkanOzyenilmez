@@ -1,19 +1,18 @@
 import React from "react";
 import {Image, View, Text, StyleSheet} from "react-native";
 
-const ContactItem = () => {
+const ContactItem = ({userName, imageUrl}) => {
     return(
         <View style={styles.chatItemContainer}>
             <View style={styles.ImageUserNameText}>
                 <Image style={styles.image} source={{
-                    uri: 'https://picsum.photos/id/266/200/300'
+                    uri: imageUrl
                 }}/>
                 <View style={styles.userNameAndText}>
-                    <Text style={styles.userName}>John Doe</Text>
+                    <Text style={styles.userName}>{userName}</Text>
                     <Text style={styles.text}>Last seen yesterday at 23:40 </Text>
                 </View>
             </View>
-            
         </View>
     )
 }

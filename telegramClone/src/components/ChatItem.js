@@ -1,7 +1,7 @@
 import React from "react";
 import {Image, View, Text, StyleSheet} from "react-native";
 
-const ChatItem = () => {
+const ChatItem = ({userName, imageUrl}) => {
     return(
         <View style={styles.chatItemContainer}>
             <View style={styles.ImageUserNameText}>
